@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 const myResume = {
     personal: {
         name: "Jedsada Chimnok",
@@ -20,3 +18,34 @@ const myResume = {
         tools: ["Git/GitHub", "Figma", "VS Code"]
     }
 };
+function render() {
+    const appElement = document.getElementById('app');
+    if (appElement) {
+        appElement.innerHTML = `
+            <div class="header">
+                <h1>${myResume.personal.name}</h1>
+                <p class="position">${myResume.personal.position}</p>
+            </div>
+
+            <div class="section">
+                <h2>About Me</h2>
+                <p>${myResume.personal.about}</p>
+            </div>
+
+            <div class="section">
+                <h2>Education</h2>
+                <p>${myResume.education.university}</p>
+                <p>GPA: ${myResume.education.gpa}</p>
+            </div>
+
+            <div class="section">
+                <h2>Skills</h2>
+                <div class="skill-tags">
+                    ${myResume.skills.programming.map(s => `<span class="tag">${s}</span>`).join('')}
+                </div>
+            </div>
+        `;
+    }
+}
+render();
+export {};

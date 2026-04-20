@@ -1,9 +1,103 @@
+/* การตั้งค่าพื้นฐาน */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 body {
+    background-color: #0d1117; /* สีมืดแบบ GitHub */
+    color: #c9d1d9; /* สีตัวอักษรเทาขาว สบายตา */
     display: flex;
+    justify-content: center;
+    padding: 40px 20px;
     min-height: 100vh;
+}
+
+/* กล่องหลักที่ครอบเนื้อหาทั้งหมด */
+#app {
+    width: 100%;
+    max-width: 800px;
+    background: #161b22;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid #30363d;
+}
+
+/* ส่วนหัว: ชื่อและตำแหน่ง */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #30363d;
+    padding-bottom: 20px;
+}
+
+.header h1 {
+    color: #58a6ff; /* สีฟ้าสว่าง */
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.position {
+    color: #8b949e;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* ส่วนเนื้อหาย่อย (About, Education, Skills) */
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    color: #58a6ff;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.section h2::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #30363d;
+    margin-left: 15px;
+}
+
+.section p {
+    line-height: 1.6;
+    color: #c9d1d9;
+}
+
+/* การตกแต่งเกรด GPA */
+.section p:last-child {
+    font-weight: bold;
+    color: #3fb950; /* สีเขียวแบบเกรดสวยๆ */
+}
+
+/* ส่วนของ Skills Tags */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tag {
+    background: #21262d;
+    color: #58a6ff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid #30363d;
+    transition: 0.3s;
+}
+
+.tag:hover {
+    background: #58a6ff;
+    color: #ffffff;
+    transform: translateY(-3px);
 }

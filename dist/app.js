@@ -14,7 +14,9 @@ const myResume = {
         gpa: 3.56
     },
     project: {
-        gamejam: "IcecreamPanic",
+        gamejam: "Overheat Until Melts",
+        gamejamUrl: "https://jedjedx.itch.io/overheat-until-melts",
+        status: "completed"
     },
     skills: {
         programming: ["Java", "Python", "JavaScript", "TypeScript"],
@@ -53,10 +55,14 @@ function render() {
             <div class="section">
                 <h2>Projects</h2>
                 <div class="contact-grid">
-                    <div class="contact-item">
-                        <p>${myResume.project.gamejam} : "developing"</p>
-                    </div>
+                    <a href="${myResume.project.gamejamUrl}" target="_blank" class="project-link-wrapper">
+                    <div class="contact-item project-card">
+                    <strong>Game Jam Project</strong>
+                    <span>${myResume.project.gamejam}</span>
+                    <small class="status-tag done">View on itch.io ↗</small>
                 </div>
+             </a>
+        </div>
             </div>
 
             <div class="section">
